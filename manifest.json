@@ -1,0 +1,26 @@
+﻿{
+    "manifest_version": 2,
+ 
+    "name": "Translate eng-ru",
+    "description": "This extension will translate keyboard english to russian text.",
+    "version": "1.0",
+	
+	
+	"browser_action":{
+		"default_icon":"img/pic48.png"
+	},
+	
+	"icons": { 
+			"16": "img/pic16.png",
+           "48": "img/pic48.png",
+          "128": "img/pic128.png" 
+	},
+ 
+  "content_scripts": [
+    {
+      "matches": ["*://vk.com/im?*sel=*"],
+      "js": ["vk_insert.js"],
+      "css": ["vk_styles.css"]
+    }
+  ]
+}
